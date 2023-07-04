@@ -1,87 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <!-- set title to Checkers -->
-        
-        <!-- link in stylesheet style.css -->
-        
-        <!-- link in stylesheet fontawesome -->
-        <link rel="stylesheet"
-              href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
-              integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-    </head>
-    <body>
-        <!-- create div with class container -->
-
-            <!-- create div with classes next-player and counter -->
-            
-                <!-- create div with classes occupied and whitePiece; id next-player -->
-                
-            <!-- Player does belong here -->
-            Player
-            
-            <!-- close div -->
-            
-            
-            <!-- create div with class game; id game -->
-            
-            
-            <!-- create div with class counter -->
-            
-                <!-- create div -->
-                
-                    <!-- create div with classes occupied and whitePiece -->
-                    
-                    <!-- create span with id white-player-count-pieces, initial value 10 -->
-                    
-                <!-- close div -->
-                
-                
-                <!-- create div -->
-                
-                    <!-- create div with classes occupied and blackPiece -->
-                    
-                    <!-- create span with id black-player-count-pieces, initial value 10 -->
-                    
-
-                <!-- close div -->                
-                
-            <!-- close div -->
-            
-        <!-- close div -->
-        
-
-        <!-- create div with class modal; id easyModal -->
-        
-            <!-- create div with class modal-content -->
-            
-                <!-- create div with class modal-body -->
-                
-                    <!-- create paragraph; The <strong id="winner"></strong> player won the game !!-->
-                    
-                    <!-- create paragraph; <span id="loser"></span>, would you like to take your revenge ???-->
-                    
-                    <!-- create div with class btn-container -->
-                    
-                        <!-- create button with class btn; onclick calls function location.reload(); text Yes -->
-                        
-                        <!-- create button with class btn; onclick calls function modalClose(); text No -->
-                        
-                    <!-- close div -->
-                    
-                <!-- close div -->
-                
-            <!-- close div -->
-            
-        <!-- close div -->
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <!-- include external JavaScript files function.js and script.js -->
+    <!-- set title to Checkers -->
+    <title>Checkers</title>
+    <!-- link in stylesheet style.css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- link in stylesheet fontawesome -->
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <!-- create div with class container -->
+    <div class="container">
+      <!-- create div with classes next-player and counter -->
+      <div class="next-player counter">
+        <!-- create div with classes occupied and whitePiece; id next-player -->
+        <div class="occupied whitePiece" id="next-player"></div>
+        <!-- Player does belong here -->
+        Player
+      <!-- close div -->
+      </div>
+      
+      <!-- create div with class game; id game -->
+      <div class="game" id="game">
+
+      <!-- create div with class counter -->
+      <div class="counter">
+        <!-- create div -->
+        <div>
+          <!-- create div with classes occupied and whitePiece -->
+          <div class="occupied whitePiece">
+          <!-- create span with id white-player-count-pieces, initial value 10 -->
+          <span id="white-player-count-pieces">10</span>
+        <!-- close div -->
+        </div>
         
-        
-    </body>
+        <!-- create div -->
+        <div>
+          <!-- create div with classes occupied and blackPiece -->
+          <div class="occupied blackPiece">
+          <!-- create span with id black-player-count-pieces, initial value 10 -->
+          <span id="black-player-count-pieces">10</span>
+        <!-- close div -->                
+        </div>
+      <!-- close div -->
+      </div>
+    <!-- close div -->
+    </div>
+
+    <!-- create div with class modal; id easyModal -->
+    <div class="modal" id="easyModal">
+      <!-- create div with class modal-content -->
+      <div class="modal-content">
+        <!-- create div with class modal-body -->
+        <div class="modal-body">
+          <!-- create paragraph; The <strong id="winner"></strong> player won the game !!-->
+          <p>The <strong id="winner"></strong> player won the game !!</p>
+          <!-- create paragraph; <span id="loser"></span>, would you like to take your revenge ???-->
+          <p><span id="loser"></span>, would you like to take your revenge ???</p>
+          <!-- create div with class btn-container -->
+          <div class="btn-container">
+            <!-- create button with class btn; onclick calls function location.reload(); text Yes -->
+            <button class="btn" onclick="location.reload()">Yes</button>
+            <!-- create button with class btn; onclick calls function modalClose(); text No -->
+            <button class="btn" onclick="modalClose()">No</button>
+          <!-- close div -->
+          </div>
+        <!-- close div -->
+        </div>
+      <!-- close div -->
+      </div>
+    <!-- close div -->
+    </div>
+  
+    <!-- include external JavaScript files function.js and script.js -->
+    <script src="function.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

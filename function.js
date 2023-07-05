@@ -1,3 +1,7 @@
+// STUDENT:     Pam Kitsuwan
+// ASSIGNMENT:  Checkers
+// DATE:        5 July 2023
+
 function movePiece(e) 
 {
     let piece = e.target;

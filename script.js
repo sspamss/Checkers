@@ -1,47 +1,34 @@
-// create class Piece
+// STUDENT:     Pam Kitsuwan
+// ASSIGNMENT:  Checkers
+// DATE:        5 July 2023
+
 class Piece
 {
-    // create method constructor, parameter list includes row and column
+    // Initialize the row and column of a checker piece
     constructor(row, column)
     {
-        // add attribute row to this class, set equal to the row parameter
-        setAttribe("row", row);
-        // add attribute column to this class, set equal to the column parameter
-        setAttribe("column", column);
+        this.row = row;
+        this.column = column;
     }
- 
-    // create method compare, parameter list includes piece
+
+    // Return true if two pieces occupy the same position
     compare(piece)
     {
-        // return the result of 
-        // row attribute of piece object is equal to this class's row attribute AND
-        // column attribute of piece object is equal to this class's column attribute
         return (piece.row == this.row) && (piece.column == this.column);
     }
 }
 
-// declare a constant modal, set equal to document, getElementById, passing "easyModal" as an argument
-const modal = document.getElementById("easyModal");
-// declare a variable game, set equal to document, getElementById, passing "game"
+// Call this div when the game is over
+const modal = document.getElementById("easyModal")
+// Call this div to display the board
 const game = document.getElementById("game");
-// declare a variable currentPlayer, set equal to the value 1
+// White player goes first
 let currentPlayer = 1;
-// declare an empty array posNewPosition
+// Array of possible positions
 let posNewPosition = [];
-// declare an empty array capturedPosition
+// Array of captured positions
 let capturedPosition = [];
-
-// declare a 2-d array board, set equal to data set
-//    row 0:  0, -1, 0, -1, 0, -1, 0, -1, 0, -1
-//    row 1:  -1, 0, -1, 0, -1, 0, -1, 0, -1, 0
-//    row 2:  0, -1, 0, -1, 0, -1, 0, -1, 0, -1
-//    row 3:  -1, 0, -1, 0, -1, 0, -1, 0, -1, 0
-//    row 4:  0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-//    row 5:  0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-//    row 6:  0, 1, 0, 1, 0, 1, 0, 1, 0, 1
-//    row 7:  1, 0, 1, 0, 1, 0, 1, 0, 1, 0
-//    row 8:  0, 1, 0, 1, 0, 1, 0, 1, 0, 1
-//    row 9:  1, 0, 1, 0, 1, 0, 1, 0, 1, 0
+// 0 = unoccupied, -1 = black occupied, 1 = white occupied
 let board = [
     [0, -1, 0, -1, 0, -1, 0, -1, 0, -1],
     [-1, 0, -1, 0, -1, 0, -1, 0, -1, 0],
@@ -55,5 +42,5 @@ let board = [
     [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
 ];
 
-// call function buildBoard
+// Run the game
 buildBoard();

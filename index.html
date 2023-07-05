@@ -1,85 +1,66 @@
+<!-- STUDENT:     Pam Kitsuwan -->
+<!-- ASSIGNMENT:  Checkers -->
+<!-- DATE:        5 July 2023 -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Define document encoding, compatibility, and viewport settings -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- set title to Checkers -->
+    <!-- Set title of webpage -->
     <title>Checkers</title>
-    <!-- link in stylesheet style.css -->
+
+    <!-- Link external stylesheets -->
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <!-- link in stylesheet fontawesome -->
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  </head>
+  </head> <!-- End of head -->
+  
   <body>
-    <!-- create div with class container -->
+		<!-- Display the entire game -->
     <div class="container">
-      <!-- create div with classes next-player and counter -->
+      <!-- Display the next player above the game board -->
       <div class="next-player counter">
-        <!-- create div with classes occupied and whitePiece; id next-player -->
         <div class="occupied whitePiece" id="next-player"></div>
-        <!-- Player does belong here -->
-        Player
-      <!-- close div -->
+        Player <!-- Do not remove this line -->
       </div>
       
-      <!-- create div with class game; id game -->
+      <!-- Display the game board -->
       <div class="game" id="game"></div>
 
-      <!-- create div with class counter -->
+      <!-- Display the contents on the game board and the number of pieces left for each player -->
       <div class="counter">
-        <!-- create div -->
         <div>
-          <!-- create div with classes occupied and whitePiece -->
           <div class="occupied whitePiece"></div>
-          <!-- create span with id white-player-count-pieces, initial value 10 -->
           <span id="white-player-count-pieces">10</span>
-        <!-- close div -->
         </div>
-        
-        <!-- create div -->
         <div>
-          <!-- create div with classes occupied and blackPiece -->
           <div class="occupied blackPiece"></div>
-          <!-- create span with id black-player-count-pieces, initial value 10 -->
           <span id="black-player-count-pieces">10</span>
-        <!-- close div -->                
         </div>
-      <!-- close div -->
       </div>
-    <!-- close div -->
-    </div>
+    </div> <!-- .container -->
 
-    <!-- create div with class modal; id easyModal -->
+		<!-- Display when the game is over -->
     <div class="modal" id="easyModal">
-      <!-- create div with class modal-content -->
       <div class="modal-content">
-        <!-- create div with class modal-body -->
         <div class="modal-body">
-          <!-- create paragraph; The <strong id="winner"></strong> player won the game !!-->
           <p>The <strong id="winner"></strong> player won the game !!</p>
-          <!-- create paragraph; <span id="loser"></span>, would you like to take your revenge ???-->
           <p><span id="loser"></span>, would you like to take your revenge ???</p>
-          <!-- create div with class btn-container -->
           <div class="btn-container">
-            <!-- create button with class btn; onclick calls function location.reload(); text Yes -->
             <button class="btn" onclick="location.reload();">Yes</button>
-            <!-- create button with class btn; onclick calls function modalClose(); text No -->
             <button class="btn" onclick="modalClose();">No</button>
-          <!-- close div -->
           </div>
-        <!-- close div -->
         </div>
-      <!-- close div -->
       </div>
-    <!-- close div -->
-    </div>
+    </div> <!-- .modal -->
   
     <!-- include external JavaScript files function.js and script.js -->
     <script src="function.js"></script>
     <script src="script.js"></script>
-  </body>
-</html>
+  </body> <!-- End of body -->
+</html> <!-- End of html -->

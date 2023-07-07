@@ -1,4 +1,4 @@
-# Checkers
+# Checkers (in progress)
 *CIS 4004 - Web-Based Information Technology*
 
 ## Description

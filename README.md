@@ -2,8 +2,7 @@
 *CIS 4004 - Web-Based Information Technology*
 
 ## Description
-(change description again when Checkers is perfected)
-This assignment is focused on writing HTML and JavaScript and will create an electronic version of a Checkers game. This assignment will require students to generate a Checkers board.
+I am currently in the process of developing a Checkers game website. My goal is to deliver an interactive and visually appealing adaptation of the traditional board game, Checkers, highlighting my proficiency in CSS, HTML, and JavaScript.
 
 ## Tech Stack
 - CSS: Styling and visual presentation
